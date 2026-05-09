@@ -10,8 +10,7 @@ const app = express();
 // Connect to MongoDB
 await connectDB()
 
-app.post('/api/clerk', express.raw({type: 'application/json'}), clerkWebhook);
-
+app.post('/api/clerk', express.raw({ type: 'application/json' }), clerkWebhook)
 
 // Middleware
 app.use(cors())
